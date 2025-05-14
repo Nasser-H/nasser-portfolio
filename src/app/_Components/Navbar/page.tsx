@@ -1,19 +1,26 @@
+'use client'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation';
 import React from 'react'
 
-export default function Navbar() {
+export default function NavBar() {
+    const navs: { text: string, link: string }[] = [
+        { text: "fa-solid fa-house-chimney", link:"/" },
+        { text: "fa-regular fa-user", link:"" },
+        { text: "fa-solid fa-store", link:"" },
+        { text: "fa-solid fa-code", link:"" },
+        { text: "fa-solid fa-phone", link:"" },
+    ];
+    const pathName = usePathname();
   return <>
-    <nav className='w-full px-4 sm:px-6 md:px-8 lg:py-6 lg:px-10 fixed z-50 sm:backdrop:blur'>
-        <div className='flex flex-col mt-4 lg:mt-0 items-center lg:flex-row justify-between w-full'>
-            <h1 className='uppercase text-main backdrop:blur text-2xl lg:text-xl'><Link href="/">Nasser Hussein</Link></h1>
-            <ul className='text-xl lg:text-lg text-white mt-5 lg:mt-0 flex gap-x-5'>
-                <li className='size-8 hover:border-main hover:border-2 hover:text-main duration-200 rounded-full flex justify-center items-center cursor-pointer'><a href="https://www.facebook.com/profile.php?id=100004291441295" target='_blank'><i className="fa-brands fa-facebook-f"></i></a></li>
-                <li className='size-8 hover:border-main hover:border-2 hover:text-main duration-200 rounded-full flex justify-center items-center cursor-pointer'><a href="http://wa.me/201061132684" target='_blank'><i className="fa-brands fa-whatsapp"></i></a></li>
-                <li className='size-8 hover:border-main hover:border-2 hover:text-main duration-200 rounded-full flex justify-center items-center cursor-pointer'><a href="mailto:nasser.h0404@gmail.com" target='_blank'><i className="fa-solid fa-at"></i></a></li>
-                <li className='size-8 hover:border-main hover:border-2 hover:text-main duration-200 rounded-full flex justify-center items-center cursor-pointer'><a href="https://github.com/Nasser-H" target='_blank'><i className="fa-brands fa-github"></i></a></li>
-                <li className='size-8 hover:border-main hover:border-2 hover:text-main duration-200 rounded-full flex justify-center items-center cursor-pointer'><a href="https://www.linkedin.com/in/nasser-hussein/" target='_blank'><i className="fa-brands fa-linkedin-in"></i></a></li>
-            </ul>
-        </div>
-    </nav>
+  <nav className='fixed lg:right-[2%] bottom-0 w-full lg:w-auto lg:h-screen flex lg:flex-col justify-center'>
+    <ul className='text-white text-xl flex lg:block justify-center bg-bgSecond backdrop-blur-3xl w-full lg:py-8 px-8 lg:rounded-full rounded-t-xl lg:px-1 py-1 space-y-1'>
+        {navs.map((nav : {text: string, link: string} ,index : number) =>
+              <li key={index} className={`size-14 ${pathName == nav.link ? 'bg-bgMain text-main -translate-y-1/2 lg:translate-y-0' : 'hover:bg-main'} rounded-full flex justify-center items-center cursor-pointer`}><Link href={''}><i className={nav.text}></i></Link></li>
+        )}
+        <li className='size-14 hover:bg-main rounded-full flex justify-center items-center cursor-pointer'><Link href={''}><span>En</span></Link></li>
+    </ul>
+  </nav>
+
   </>
 }
