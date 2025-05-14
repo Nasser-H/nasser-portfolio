@@ -1,12 +1,14 @@
 import React from 'react'
-import TopBar from './_Components/TopBar/page';
-import NavBar from './_Components/NavBar/page';
+import TopBar from './_components/topbar/page';
+import NavBar from './_components/navbar/page';
+import Footer from './_components/footer/page';
 
 export default function Home() {
   return <>
   <TopBar/>
   <NavBar/>
-    {/* <div>Home</div> */}
+  {/* <div>Home</div> */}
+  <Footer/>
   </>
 }
 
