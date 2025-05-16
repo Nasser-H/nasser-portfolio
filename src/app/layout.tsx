@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import TopBar from "./_components/topbar/page";
+import NavBar from "./_components/navbar/page";
+import Footer from "./_components/footer/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +37,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} bg-bgMain`}>
-        {children}
+          <TopBar/>
+          <NavBar/>
+          <div className="wrapper min-h-[77.1vh] lg:min-h-[91vh] pt-32 xl:pt-0 flex items-center">
+            {children}
+          </div>
+          <Footer/>
       </body>
     </html>
   );
