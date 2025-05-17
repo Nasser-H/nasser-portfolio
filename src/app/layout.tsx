@@ -39,7 +39,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} bg-bgMain`}>
           <TopBar/>
           <NavBar/>
-          <div className="wrapper min-h-[77.1vh] lg:min-h-[91vh] pt-32 xl:pt-0 flex items-center">
+          <div className="wrapper min-h-[77.1vh] lg:min-h-[91vh] pt-16 lg:pt-36 xl:pt-0 flex items-center">
             {children}
           </div>
           <Footer/>
