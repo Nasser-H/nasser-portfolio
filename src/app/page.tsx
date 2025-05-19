@@ -1,6 +1,6 @@
 import React from 'react'
-import nasserImag from '../assets/nasser hussein.png';
-import Image from 'next/image';
+import nasserImag from '../assets/nasser-hussein-home.png';
+import Image from 'next/image'; 
 import Link from 'next/link';
 export default function Home() {
   return <>
