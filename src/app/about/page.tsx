@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import React from 'react'
 import nasserImage from '../../assets/nasser-hussein-about.png'
 import Image from 'next/image'
