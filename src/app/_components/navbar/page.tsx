@@ -7,7 +7,7 @@ export default function NavBar() {
     const navs: { text: string, link: string }[] = [
         { text: "fa-solid fa-house-chimney", link:"/" },
         { text: "fa-regular fa-user", link:"/about" },
-        { text: "fa-solid fa-store", link:"" },
+        { text: "fa-solid fa-store", link:"/projects" },
         { text: "fa-solid fa-code", link:"" },
         { text: "fa-solid fa-phone", link:"" },
     ];
