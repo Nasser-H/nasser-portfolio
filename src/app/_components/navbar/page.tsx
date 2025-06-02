@@ -8,7 +8,7 @@ export default function NavBar() {
         { text: "fa-solid fa-house-chimney", link:"/" },
         { text: "fa-regular fa-user", link:"/about" },
         { text: "fa-solid fa-store", link:"/projects" },
-        { text: "fa-solid fa-code", link:"" },
+        { text: "fa-solid fa-code", link:"/skills" },
         { text: "fa-solid fa-phone", link:"" },
     ];
     const pathName = usePathname();

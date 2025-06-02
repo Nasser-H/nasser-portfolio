@@ -6,3 +6,9 @@ export interface Project {
     projectGitHubLink: string;
     projectLiveLink: string;
   }
+export interface Skill {
+    skillName: string,
+    skillIcon?: string,
+    skillIcon2?: string,
+    levelInPercentage: number,
+  }

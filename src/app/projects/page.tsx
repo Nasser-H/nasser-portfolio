@@ -51,7 +51,7 @@ export default function Projects() {
             projectImage: startFrameworkImage,
             projectGitHubLink: 'https://github.com/Nasser-H/Start-Framework',
             projectLiveLink: 'https://start-framework-weld-sigma.vercel.app/'
-        },
+        }
     ];
     const staticProjects : Project[] = [
         {
